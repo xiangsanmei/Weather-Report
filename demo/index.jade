@@ -8,66 +8,34 @@ html(lang="en")
       title Weather Report
       link(rel="styleSheet" href="../bower_components/bootstrap/dist/css/bootstrap.css")
 
-   .container
+   .container(ng-app="weather", ng-controller="weatherCtl")
       .container-fluid
          .row(style="padding:100px;")
             .dropdown(style="margin-bottom:20px;")
                button.btn.btn-default.dropdown-toggle(type='button',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false')
-                  | 上海
+                  | {{defaultSelect.selectName}}
                   span.caret
                ul.dropdown-menu
                   li
-                     a(href='#') 北京
+                     a(href='#' ng-repeat="city in City" ng-click ="clickSelect($index)") {{city.name}}
                   li
-                     a(href='#') 上海
-                  li
-                     a(href='#') 深圳
-                  li
-                     a(href='#') 长沙
-                  li
-                     a(href='#') 南京
-               button.btn.btn-success(style="float: right;") 查询
+                  
+               button.btn.btn-success(style="float: right;" ng-click="getWeather()") 查询
             table.table.table-bordered
                tr
                   th 日期
                   th 最高气温
                   th 最低气温
                   th 天气
-               tr
-                  td
-                  td
-                  td
-                  td
-               tr
-                  td
-                  td
-                  td
-                  td
-               tr
-                  td
-                  td
-                  td
-                  td
-               tr
-                  td
-                  td
-                  td
-                  td
-               tr
-                  td
-                  td
-                  td
-                  td
-               tr
-                  td
-                  td
-                  td
-                  td
-               tr
-                  td
-                  td
-                  td
-                  td
+               tr(ng-repeat="date in weatherData")
+                  td {{date.date}}
+                  td {{date.high}}
+                  td {{date.low}}
+                  td {{date.weather}}              
+                
+ 
 
       script(src="../bower_components/jquery/dist/jquery.js")
       script(src="../bower_components/bootstrap/dist/js/bootstrap.js")
+      script(src="../bower_components/angular/angular.min.js")
+      script(src="../demo/weathers.js")
