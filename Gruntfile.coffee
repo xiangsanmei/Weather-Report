@@ -2,13 +2,12 @@ module.exports = (grunt)->
   grunt.initConfig
 
     jade:
-      debug:
+      product:
         options:
           data:
-            debug: true,
-            timestamp: "<%= new Date().getTime() %>"
+            debug: false
         files:
-          "demo/index.html": "demo/index.jade"
+          "demo/index.html": ["demo/index.jade"]
 
     coffee:
       product:
@@ -24,7 +23,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks 'grunt-contrib-jade'
 
-  grunt.registerTask "default", ["jade:debug"]
-  grunt.registerTask "default", ["coffee:product"]
+  grunt.registerTask "default", ["jade:product","coffee:product"]
+
 
 
