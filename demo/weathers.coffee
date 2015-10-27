@@ -8,7 +8,8 @@ weatherModel.service "weather",['$http',
 		date = new Date parseInt(time) * 1000.toString()
 		date.getFullYear().toString() + '-' + date.getMonth().toString() + '-'+date.getDay().toString()		
 	this.convertemperatures = (temp) ->
-		 (temp / 33.8).toFixed 2	
+		 return temp
+		 #(temp / 33.8).toFixed 2	
 	this.getWeatherPost = (weatherData,city) ->
 		url ="http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&units=metric&cnt=7&appid=bd82977b86bf27fb59a04b61b657fb6f"	
 		$http.get url 
