@@ -21,7 +21,7 @@ grunt
 ```
 python -m SimpleHTTPServer
 ```
-###
+##In the browser to access "http://localhost: 8000(your port)",find the demo directory 
 
   
   
