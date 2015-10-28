@@ -1,26 +1,22 @@
 # Weather-Report
 
 ## Install env
-...
-  sudo apt-get install npm -g 
+```
+sudo apt-get install npm -g 
+npm install bower -g
+npm install grunt-cli -g
+npm install grunt -g
+```  
+## switch to the project root directory
+```  
+npm install
+bower install
+```
   
-  npm install bower -g
-  
-  npm install grunt-cli -g
-  
-  npm install grunt -g
-  
-  switch to the project root directory
-  
-  npm install
-  
-  bower install
-...  
-  
-## build the project
-...
-  grunt
-...
+## Compile the project
+```
+grunt
+```
 
   
   
