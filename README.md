@@ -1,9 +1,7 @@
 # Weather-Report
 
-Create a git repository for this project
-
-Install env
-
+## Install env
+...
   sudo apt-get install npm -g 
   
   npm install bower -g
@@ -17,12 +15,12 @@ Install env
   npm install
   
   bower install
+...  
   
-  
-Compile the project
-
+## build the project
+...
   grunt
-
+...
 
   
   
