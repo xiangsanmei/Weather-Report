@@ -17,6 +17,11 @@ bower install
 ```
 grunt
 ```
+## Run the project
+```
+python -m SimpleHTTPServer
+```
+###
 
   
   
