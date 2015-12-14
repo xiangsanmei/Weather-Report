@@ -71,6 +71,7 @@ weatherModel.controller('weatherCtl', [
     };
     return $scope.getWeather = function() {
       $scope.weatherData = [];
+      hshs
       return weather.getWeather($scope.weatherData, $scope.defaultSelect.seachcity);
     };
   }
